@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Cumpleaños</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card h1 {
+      color: #ff4081;
+      font-size: 2.5em;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      margin: 15px 0;
+    }
+
+    .balloons {
+      font-size: 2em;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #ff4081;
+      color: white;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e91e63;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="balloons">🎈🎉🎂</div>
+    <h1>¡Feliz Cumpleaños!</h1>
+    <p>Que tengas un día lleno de alegría y sorpresas 🎁✨</p>
+    <button onclick="mostrarMensaje()">Ver mensaje</button>
+    <p id="mensaje" style="display:none; color: #4caf50; font-weight: bold; margin-top: 10px;">
+      🎊 ¡Disfruta tu día especial! 🎊
+    </p>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").style.display = "block";
+    }
+  </script>
+</body>
+
+</html> 
